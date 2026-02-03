@@ -50,6 +50,20 @@ class KitchenMateApp:
         self.create_bottom_nav()
         self.show_frame('main')
 
+    def handle_registration(self, username, password):
+        """Метод для обработки регистрации из интерфейса"""
+        if not username or not password:
+            messagebox.showwarning("Ошибка", "Заполните все поля!")
+            return
+
+        # Вызов 'серверной' логики из db.py
+        success = self.db.register_user(username, password)
+        
+        if success:
+            messagebox.showinfo("Успех", f"Аккаунт {username} создан!")
+        else:
+            messagebox.showerror("Ошибка", "Не удалось сохранить пользователя.")
+
     def create_screens(self):
         self.frames['main'] = MainScreen(self.root, self, self.green)
         self.frames['pantry'] = PantryScreen(self.root, self, self.green, self.red, self.pantry_items)
