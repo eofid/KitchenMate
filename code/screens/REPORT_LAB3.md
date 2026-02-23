@@ -15,7 +15,7 @@
 6. **Сквозная функциональность:** Единая система авторизации и централизованная обработка ошибок API.
 
 **Схема слоев (To Be):**
-![Архитектура To Be]("C:\Users\user\Desktop\docs\architecture_to_be.png")
+![Архитектура To Be]("C:\Users\user\Desktop\KitchenMate\docs\architecture_to_be.png")
 
 ---
 
@@ -23,7 +23,7 @@
 Текущая реализация соответствует модульному подходу, где каждый экран вынесен в отдельный класс в папке `screens/`.
 
 **Диаграмма (As Is):**
-![Архитектура As Is]("C:\Users\user\Desktop\docs\architecture_as_is.png")
+![Архитектура As Is]("C:\Users\user\Desktop\KitchenMate\docs\architecture_as_is.png")
 
 ---
 
