@@ -64,6 +64,21 @@ class KitchenMateApp:
         else:
             messagebox.showerror("Ошибка", "Не удалось сохранить пользователя.")
 
+    def handle_login(self, username, password):
+        """Метод для обработки входа из интерфейса"""
+        if not username or not password:
+            messagebox.showwarning("Ошибка", "Введите логин и пароль!")
+            return
+
+        # Вызов серверной логики из db.py
+        is_valid = self.db.authenticate_user(username, password)
+        
+        if is_valid:
+            messagebox.showinfo("Успех", f"Добро пожаловать, {username}!")
+            self.show_frame('main') # Переход в главное меню после входа
+        else:
+            messagebox.showerror("Ошибка", "Неверный логин или пароль.")
+
     def create_screens(self):
         self.frames['main'] = MainScreen(self.root, self, self.green)
         self.frames['pantry'] = PantryScreen(self.root, self, self.green, self.red, self.pantry_items)

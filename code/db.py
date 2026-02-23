@@ -109,6 +109,29 @@ class Database:
         except Exception as e:
             print(f"Backend Error: {e}")
             return False
+        
+    def authenticate_user(self, username, password):
+        """Метод аутентификации: проверяет наличие пары логин/пароль в базе"""
+        import os
+        filename = "users_db.json"
+        
+        if not os.path.exists(filename):
+            print("Backend Error: База пользователей не найдена.")
+            return False
+            
+        try:
+            with open(filename, "r") as f:
+                for line in f:
+                    if line.strip():
+                        user = json.loads(line)
+                        if user['username'] == username and user['password'] == password:
+                            print(f"Backend: Пользователь {username} успешно авторизован.")
+                            return True
+            print(f"Backend: Неверный логин или пароль для {username}.")
+            return False
+        except Exception as e:
+            print(f"Backend Error: {e}")
+            return False
 
     def close(self):
         self.conn.close()
