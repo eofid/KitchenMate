@@ -23,7 +23,7 @@
 Текущая реализация соответствует модульному подходу, где каждый экран вынесен в отдельный класс в папке `screens/`.
 
 **Диаграмма (As Is):**
-![Архитектура As Is]("C:\Users\user\Desktop\KitchenMate\docs\architecture_as_is.png")
+![Архитектура As Is]("https://github.com/eofid/KitchenMate/blob/main/docs/architecture_as_is.png")
 
 ---
 
