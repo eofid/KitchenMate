@@ -15,8 +15,7 @@
 6. **Сквозная функциональность:** Единая система авторизации и централизованная обработка ошибок API.
 
 **Схема слоев (To Be):**
-![Архитектура To Be]
-(https://github.com/eofid/KitchenMate/blob/main/docs/architecture_to_be.png)
+![Архитектура To Be](https://github.com/eofid/KitchenMate/blob/main/docs/architecture_to_be.png)
 
 ---
 
@@ -24,8 +23,7 @@
 Текущая реализация соответствует модульному подходу, где каждый экран вынесен в отдельный класс в папке `screens/`.
 
 **Диаграмма (As Is):**
-![Архитектура As Is]
-(https://github.com/eofid/KitchenMate/blob/main/docs/architecture_as_is.png)
+![Архитектура As Is](https://github.com/eofid/KitchenMate/blob/main/docs/architecture_as_is.png)
 
 ---
 
